@@ -50,7 +50,7 @@ const Tarea = ({ item, cambiarEstado, eliminarTarea, actualizarTarea }) => {
                                 </button>
                             </form>
                         </div>
-                        : <p className='d-inline'>{item.tarea}</p>
+                        : <p className='d-inline'>{item.tarea} - <span className='fw-light text-muted'>{item.fecha}</span></p>
                 }
 
 

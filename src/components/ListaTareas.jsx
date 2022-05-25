@@ -40,7 +40,7 @@ const ListaTareas = ({tareas, setTareas}) => {
                 <div className="col-10 offset-1 p-2 border">
                     <p className='text-center fw-bold'>LISTA DE TAREAS</p>
                     <ul className="list-group list-group-flush">
-                        {tareas.map( (item) => (
+                        {tareas.length > 0 ? tareas.map( (item) => (
 
                             <Tarea 
                             key={item.id} 
@@ -50,7 +50,7 @@ const ListaTareas = ({tareas, setTareas}) => {
                             actualizarTarea={actualizarTarea}
                             />
 
-                        ) )}
+                        ) ) : <p className='text-center text-muted'>THERE ARE NOT TASKS</p> }
                         
                     </ul>
                 </div>
